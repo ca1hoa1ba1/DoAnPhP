@@ -10,7 +10,7 @@
     if(postInput('c_passwd') != postInput('c_re_passwd')) {
       $errors['c_re_passwd'] = "Re-Password không trùng khớp";
     }
-    if(!preg_match("/^[a-zA-Z\s]+$/", to_slug(postInput('c_fullname')), $match)){
+    if(!preg_match("/^[a-zA-Z\s-]+$/", to_slug(postInput('c_fullname')), $match)){
       $errors['c_fullname'] = "Họ tên không hợp lệ";
     }
     if (!filter_var(postInput('c_email_address'), FILTER_VALIDATE_EMAIL)) {
