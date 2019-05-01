@@ -300,4 +300,12 @@
         return $amount;
     }
 
+    function getStatus($s) {
+        if($s == 1) {
+            return '<span class="bg-success text-white rounded p-2">Done</span>';
+        }else {
+            return '<span class="bg-primary text-white rounded p-2">pending</span>';
+        }
+    }
+
  ?>

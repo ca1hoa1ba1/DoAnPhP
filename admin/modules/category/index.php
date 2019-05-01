@@ -48,7 +48,7 @@
                       <td><?php echo $item['namecate'] ?></td>
                       <td>  
                         <a href="edit.php?id=<?php echo $item['id']; ?>" class="btn btn-secondary"><i class="fas fa-edit"></i></a>
-                        <a href="delete.php?id=<?php echo $item['id']; ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                        <a href="delete.php?id=<?php echo $item['id']; ?>" class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i></a>
                       </td>
                     </tr>
                   <?php $i++; endforeach; ?>

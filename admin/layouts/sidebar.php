@@ -29,6 +29,12 @@
           <span>User</span>
         </a>
       </li>
+      <li class="nav-item <?php echo isset($open) && $open == 'order' ? 'active-sidebar' : ''; ?>">
+        <a class="nav-link" href="<?php echo modules('order'); ?>">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Order</span>
+        </a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>

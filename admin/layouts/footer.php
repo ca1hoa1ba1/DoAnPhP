@@ -32,7 +32,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="logout.php">Logout</a>
         </div>
       </div>
     </div>
@@ -47,6 +47,14 @@
 
   <!-- Custom scripts for all pages-->
   <script src="<?php echo public_admin(); ?>js/sb-admin.min.js"></script>
+  <script type="text/javascript"> 
+    $('.btn-del').click(function(e){
+      e.preventDefault();
+      if(confirm('Are you sure ??')){
+        location.href = $(this).attr('href');
+      }
+    });
+  </script>
   <?php 
     if(isset($table) && $table == true) {
       echo '

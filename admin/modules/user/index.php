@@ -39,7 +39,7 @@
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Create_at</th>
-                    <th>Action</th>
+                    <!-- <th>Action</th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -48,13 +48,13 @@
                       <td><?php echo $i; ?></td>
                       <td><?php echo $user['username'] ?></td>
                       <td><?php echo $user['fullname'] ?></td>
-                      <td><?php echo $user['address'] . ', ' . $user['state']; ?></td>
+                      <td><?php echo strlen($user['address'] . ', ' . $user['state']) > 30 ? substr($user['address'] . ', ' . $user['state'],0,30):$user['address'] . ', ' . $user['state'] ; ?></td>
                       <td><?php echo $user['email'] ?></td>
                       <td><?php echo $user['phone'] ?></td>
                       <td><?php echo $user['create_at'] ?></td>
-                      <td>  
+                    <!--   <td>  
                         <a href="delete.php?id=<?php echo $user['id']; ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-                      </td>
+                      </td> -->
                     </tr>
                   <?php $i++; endforeach; ?>
                 </tbody>
